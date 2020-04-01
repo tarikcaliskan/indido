@@ -11,18 +11,22 @@
 		"react": "^16.13.0",
 		"react-dom": "^16.13.0",
 		"react-redux": "^7.2.0",
+		"react-router-dom": "^5.1.2",
 		"react-scripts": "3.4.0",
 		"react-transition-group": "^4.3.0",
 		"reactstrap": "^8.4.1",
 		"redux": "^4.0.5",
 		"redux-thunk": "^2.3.0",
+		"styled-components": "^5.0.1",
+		"tailwindcss": "^1.2.0",
 		"uuid": "^7.0.2"
 	},
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"build:css": "tailwind build src/style.css -o dist/style.css"
 	},
 	"proxy": "http://localhost:5000",
 	"eslintConfig": {

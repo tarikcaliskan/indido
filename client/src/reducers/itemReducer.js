@@ -1,6 +1,7 @@
 import {
 	GET_ITEMS,
 	ADD_ITEM,
+	TOGGLE_ITEM,
 	DELETE_ITEM,
 	ITEMS_LOADING
 } from '../actions/types';
@@ -15,6 +16,16 @@ export default function(state = initialState, action) {
 				...state,
 				items: action.payload,
 				loading: false
+			};
+
+		case TOGGLE_ITEM:
+			return {
+				...state,
+				items: state.items.map((item, i) =>
+					item._id === action.payload.id
+						? { ...item, isCompleted: action.payload.isCompleted }
+						: item
+				)
 			};
 		case DELETE_ITEM:
 			return {
