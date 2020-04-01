@@ -3,7 +3,7 @@ import TodoList from './TodoList';
 import AddTodo from './AddTodo';
 export default function Protected() {
 	return (
-		<>
+		<div className="my-auto">
 			{' '}
 			<header className="bg-white shadow mt-12 bg-indigo-600 mb-12">
 				<div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -14,6 +14,6 @@ export default function Protected() {
 			</header>
 			<AddTodo />
 			<TodoList />
-		</>
+		</div>
 	);
 }

@@ -32,7 +32,7 @@ class AddTodo extends Component {
 		return (
 			<div>
 				<div
-					className="rounded-md shadow mx-auto text-center w-1/3 sm:w-1/4"
+					className="rounded-md shadow mx-auto text-center w-5/6 sm:w-1/3 sm:w-1/4"
 					onClick={this.toggle}
 				>
 					<p className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
@@ -40,11 +40,11 @@ class AddTodo extends Component {
 					</p>
 				</div>
 				{this.state.modal ? (
-					<div className="fixed bottom-0 inset-x-0 px-4 pb-4 sm:inset-0 sm:flex sm:items-center sm:justify-center">
+					<div className="sm:fixed bottom-0 inset-x-0 px-4 pb-4 sm:inset-0 sm:flex sm:items-center sm:justify-center">
 						<div>
-							<div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+							<div className="sm:absolute inset-0 bg-gray-600 opacity-75"></div>
 						</div>
-						<div className="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full">
+						<div className="bg-white rounded-lg overflow-hidden sm:shadow-xl transform transition-all sm:max-w-lg sm:w-full">
 							<form onSubmit={this.onSubmit}>
 								<div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
 									<div className="sm:flex sm:items-start">

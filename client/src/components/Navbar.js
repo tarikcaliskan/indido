@@ -28,10 +28,7 @@ class Navbar extends Component {
 		});
 	};
 
-	redirectUser = () => {
-		this.setState({
-			isOpenUser: !this.state.isOpenUser
-		});
+	logout = () => {
 		this.props.logout();
 	};
 
@@ -71,7 +68,10 @@ class Navbar extends Component {
 								focus:bg-gray-100
 								focus:text-indigo-700
 								rounded-md transition duration-150 ease-in-out"
-									onClick={this.redirectUser}
+									onClick={() => {
+										this.toggleUser();
+										this.logout();
+									}}
 								>
 									<div>
 										<i className="fas fa-running fa-lg ml-2 mt-2 mr-2"></i>
@@ -100,11 +100,14 @@ class Navbar extends Component {
 				text-sm text-indigo-600 bg-gray-50 hover:bg-gray-100
 				hover:text-pink-500 focus:outline-none focus:bg-gray-100
 				focus:text-indigo-700 transition duration-150 ease-in-out"
+				onClick={() => {
+					this.toggle();
+					this.logout();
+				}}
 			>
 				<i
 					className="fas
 					fa-running fa-lg ml-4"
-					onClick={this.props.logout}
 				></i>
 				&nbsp; OTURUMU KAPAT
 			</a>
