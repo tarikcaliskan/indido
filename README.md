@@ -6,6 +6,7 @@ E-posta: test@gmail.com </br>
 Şifre: test </br></br>
 Lütfen örneği boş verilerle doldurmayınız.
 
+Mongo URI bilgisini güncelleyiniz.
 
 Çalıştırma komutu:
 ```
